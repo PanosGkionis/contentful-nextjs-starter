@@ -6,7 +6,7 @@ import {getPage} from '../lib/api';
 import {IPage} from '../types/generated/contentful';
 import styles from '../styles/Home.module.css';
 
-export default function Home(props: {page: IPage}) {
+export default function Home(props: any) {
 	const {page} = props;
 
 	return (
