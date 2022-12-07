@@ -6,18 +6,18 @@ import {getPage} from '../lib/api';
 import {IPage} from '../types/generated/contentful';
 import styles from '../styles/Home.module.css';
 
-export default function Home(props: any) {
+export default function Home(props: {page: IPage}) {
 	const {page} = props;
 
 	return (
 		<>
 			<Head>
-				<title>Contentful tech session</title>
+				<title>{page.fields.title}</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
 			<div className={styles.main}>
-				<h1 className={styles.heading}>Home Page</h1>
+				<h1 className={styles.heading}>{page.fields.internalName}</h1>
 
 				<div className={styles.content}>
 					{page.fields.sections?.map(
