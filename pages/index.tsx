@@ -4,11 +4,10 @@ import Head from 'next/head';
 import ContentSection from '../components/ContentSection';
 import {getPage} from '../lib/api';
 import {IPage} from '../types/generated/contentful';
-import styles from '../styles/Home.module.css';
 
 export default function Home(props: {page: IPage}) {
 	const {page} = props;
-
+	console.log(page)
 	return (
 		<>
 			<Head>
@@ -16,10 +15,9 @@ export default function Home(props: {page: IPage}) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<div className={styles.main}>
-				<h1 className={styles.heading}>{page.fields.internalName}</h1>
-
-				<div className={styles.content}>
+			<div>
+				<h1 className='w-fit mx-auto text-center text-2xl font-bold p-4 border-4 border-yellow-500'>{page.fields.internalName}</h1>
+				<div className='flex flex-col justify-center items-center overflow-hidden'>
 					{page.fields.sections?.map(
 						(section: Entry<any>, i: number) => (
 							<ContentSection key={i} section={section} />

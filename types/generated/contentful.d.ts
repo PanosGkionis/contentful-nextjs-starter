@@ -14,7 +14,7 @@ export interface IPageFields {
   slug: string;
 
   /** Sections */
-  sections?: Entry<{ [fieldId: string]: unknown }>[] | undefined;
+  sections?: ISection[] | undefined;
 }
 
 export interface IPage extends Entry<IPageFields> {
@@ -35,11 +35,11 @@ export interface IPage extends Entry<IPageFields> {
 }
 
 export interface ISectionFields {
-  /** Anchor */
-  anchor?: string | undefined;
-
   /** Internal title */
   internalTitle?: string | undefined;
+
+  /** Anchor */
+  anchor?: string | undefined;
 
   /** Content */
   content: Entry<{ [fieldId: string]: unknown }>[];
