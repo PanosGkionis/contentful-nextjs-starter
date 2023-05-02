@@ -2,7 +2,7 @@
 
 Clone repo
 
-1.  `cd cms-contentful`
+1.  `cd contentful-nextjs-starter`
 2.  `yarn install`
 3.  Configure `env variables`
 4.  `yarn dev` to start the development server.
@@ -10,7 +10,7 @@ Clone repo
 ## Other scripts
 
 To generate typescript types
-`yarn contentful-typescript-codegen`
+`yarn generate-types`
 
 ## Content types used
 
